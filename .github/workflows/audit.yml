@@ -1,15 +1,13 @@
-name: Audit
+name: Lint Codebase
  
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: "0 0 * * *"
  
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
  
     steps:
@@ -22,5 +20,5 @@ jobs:
  
       - name: Install dependencies
         run: npm install
-      - name: Run Audit
+      - name: Run audit
         run: npm audit
