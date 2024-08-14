@@ -1,4 +1,4 @@
-name: Lint Codebase
+name: Audit
  
 on:
   push:
